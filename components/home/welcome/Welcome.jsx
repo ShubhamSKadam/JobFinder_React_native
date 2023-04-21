@@ -17,7 +17,7 @@ const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
-  const [activeJobType, setactiveJobType] = useState("Full-time");
+  const [activeJobType, setActiveJobType] = useState("Full-time");
 
   return (
     <View>
@@ -31,10 +31,11 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
           <TextInput
             style={styles.searchInput}
             value={searchTerm}
-            onChange={(text) => setSearchTerm(text)}
+            onChangeText={(text) => setSearchTerm(text)}
             placeholder="What are you looking for?"
           />
         </View>
+
         <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
           <Image
             source={icons.search}
@@ -51,11 +52,11 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             <TouchableOpacity
               style={styles.tab(activeJobType, item)}
               onPress={() => {
-                setactiveJobType(item);
+                setActiveJobType(item);
                 router.push(`/search/${item}`);
               }}
             >
-              <Text style={styles.tabText(activeJobType)}>{item}</Text>
+              <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
             </TouchableOpacity>
           )}
           keyExtractor={(item) => item}
