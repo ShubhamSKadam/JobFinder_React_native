@@ -4,9 +4,7 @@ JobFinder is a mobile application built using React Native that allows users to 
 
 ### Screenshots :
 
-<img  src="./readmeImages/Home.png"  height="400px">
-<img  src="./readmeImages/SearchResults.png"  height="400px">
-
+<img src="./readmeImages/HS.png" height="400px">
 <img  src="./readmeImages/Description.png"  height="400px">
 
 ### Test this app in your local machine:
